@@ -340,7 +340,7 @@ function renderCart(){
                 div.id = 'div';
                 div.style.marginTop = '10px';
                 div.style.marginBottom = '10px';
-                div.style.width = '80%';
+                div.style.width = '90%';
                 div.style.height = 'auto';
                 div.style.display = 'flex';
                 div.style.flexDirection = 'column';
