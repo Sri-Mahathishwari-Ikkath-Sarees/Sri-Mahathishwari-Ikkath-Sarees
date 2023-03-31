@@ -612,6 +612,14 @@ for (let i = 0; i < 24; ++i) {
   footer.appendChild(div);
 }
 
+const footerLink = document.querySelector('.company-name');
+
+  footerLink.addEventListener('click', function(event) {
+    event.preventDefault(); // prevent default link behavior
+    const footer = document.querySelector('#footer');
+    footer.scrollIntoView({ behavior: 'smooth' }); // scroll to footer
+  });
+
 function initialize() {
   addToDom(c7000Images, c7000, 6999, 7999, '100%', '350px');
   addToDom(c8000Images, c8000, 7999, 8999, '100%', '350px');
