@@ -365,6 +365,7 @@ function addToDom(list, addTo, insertCost, delCost, width, height) {
     div.style.backgroundColor = 'white';
     div.style.alignItems = 'center';
     div.style.justifyContent = 'space-between';
+    div.style.boxShadow = '0px 0px 5px white';
 
     const img = document.createElement('img');
     img.src = list[i];
@@ -558,17 +559,16 @@ function renderCart() {
   }
   else {
     cart.innerHTML = '';
+    cart.style.width = '100%';
+    cart.style.height = 'auto';
+    cart.style.display = 'flex';
+    cart.style.flexDirection = 'column';
+    cart.style.alignItems = 'center';
+    cart.style.justifyContent = 'space-between';
+    cart.style.textAlign = 'center';
+    cart.style.backgroundColor = 'black';
     for (let i = 0; i < addToCartList.length; ++i) {
       if (addToCartList[i].toBuy === true) {
-        cart.style.width = '100%';
-        cart.style.height = 'auto';
-        cart.style.display = 'flex';
-        cart.style.flexDirection = 'column';
-        cart.style.alignItems = 'center';
-        cart.style.justifyContent = 'space-between';
-        cart.style.textAlign = 'center';
-        cart.style.backgroundColor = 'black';
-
         const div = document.createElement('div');
         div.id = 'div';
         div.style.marginTop = '10px';
@@ -580,6 +580,7 @@ function renderCart() {
         div.style.backgroundColor = 'white';
         div.style.alignItems = 'center';
         div.style.justifyContent = 'space-between';
+        div.style.boxShadow = '0px 0px 5px white';
 
         const img = document.createElement('img');
         img.src = addToCartList[i].imgSrc;
